@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<HTML lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Title> Portafolio </Title>
+    <meta name="theme-color" content="#215BC9">
+    <Meta name="description" content="Hola mundo, este es mi primer pagina web" />
+    <Meta name="author" content="Einar_RV" />
+    <meta name="keywords" content="Blog, videojuegos, vida cotidiana, facebook gaming, developer" />
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" type="text/css " href="Style.css">
+    <link rel="stylesheet" type="text/scss" href="style.scss">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-5.15.4-web/css/all.css">
+    <!--FONT OSWALD-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container"> <!--Navegador-->
+        <nav>
+            <a class="logotipo" href="#" class="enlace">¡Hola Mundo!</a>
+            <!--Aqui puede ir un titulo-->
+            <div class="imagen">
+                <a href="Index.html"><img src="img/circulo.png" height="50"></a>
+                <!--Imagen en el centro de la pag-->
+            </div>
+            <div class="links">
+                <!--Navegador que se encuentra hasta arriba de la pagina-->
+                <a href="#about">About</a>
+                <a href="#cv">CV</a>
+                <a href="#contact">Contact</a>
+                <button class="switch" id="switch">
+                    <!--Boton para cambio de apariencia (dia-noche)-->
+                    <span><i class="fas fa-sun"></i></span>
+                    <span><i class="fas fa-moon"></i></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="contenedor"> <!--Tarjeta con nombre-->
+        <!--Primer tarjeta-->
+        <div class="card">
+            <div>
+                <h1>Einar Rodriguez Valle</h1>
+                <p>Ingeniero de Software</p>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor_2"> <!--Tarjeta con imagen-->
+        <!--Segunda tarjeta, solo contiene una imagen-->
+        <div class="card_2">
+            <div>
+                <img src="img/Foto_einar.jpeg">
+            </div>
+        </div>
+    </div>
+    <div class="contenedor_3" id="cv"> <!--Tarjeta con cv-->
+        <!--Tercer tarjeta-->
+        <div class="card">
+            <div class="icono">
+                <i class="fas fa-user"></i>
+            </div>
+            <div>
+                <button class="btn"><a href="Doc/Einar Rodriguez valle CV.pdf" target="_blank">Descarga CV</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-titleone banner-titleone-1"> <!--Banner de about me-->
+        <a href="#about"><h1 class="title" id="about">About me</h1></a>
+    </div>
+    <div class="banner-content">
+        ¡Hola! Soy un estudiante de ingenieria en la Universidad Autónoma de Querétaro, cursando la carrera de 
+        Ingenieria de Software, realizando en estos meses de cursos una página donde expongo documentos de ética
+        y legislación ofrecidos por el profesor de esta materia, ademas, en la clase de introducción a la programación
+        junto a mi compañero de clase una serie de programas realizados en el programa eclipse con lenguaje java.
+    </br>
+        Dejo mi curriculum en la tarjeta de arriba, donde podrán observar los distintos trabajos fuera del mundo tecnológico. 
+    </div>
+
+    <div class="banner-titletwo banner-titletwo-2 social">
+        <a href="#social"><h1 class="title">Social Media</h1></a>
+    </div>
+    <section class="social" id="contact"> <!--Sección de social-->
+        <div class="links_contacto">
+            <a href="https://www.facebook.com/einar.rodriguezvalle.56/" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/einar_rv/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/SprainterN1" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </section>
+
+    <!--SCROLL REVEAL-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</HTML>

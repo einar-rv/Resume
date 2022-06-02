@@ -1,0 +1,486 @@
+$negro: #111111;
+$blanco: #FEFEFE;
+$grisOscuro: #222222;
+$grisClaro: #e0e0e0;
+$grisClaroHover: #ACABAB;
+$azul: #1e4886;
+$azulHover: #254BE6;
+
+$sombraDark: 10px 10px 20px rgba(170,170,170,.16);
+$sombraLight: 10px 10px 20px rgba(0,0,0,.16);
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	background:
+		linear-gradient(
+		  to bottom,
+		  hsl(220.34, 87.88%, 87.06%) 0%,
+		  hsl(220.35, 85.8%, 86.79%) 8.1%,
+		  hsl(220.35, 80.18%, 86.01%) 15.4%,
+		  hsl(220.35, 72.26%, 84.73%) 22%,
+		  hsl(220.36, 63.3%, 82.98%) 28.1%,
+		  hsl(220.36, 54.29%, 80.76%) 33.7%,
+		  hsl(220.37, 45.81%, 78.08%) 39.1%,
+		  hsl(220.38, 38.15%, 74.91%) 44.4%,
+		  hsl(220.4, 31.38%, 71.26%) 49.7%,
+		  hsl(220.42, 25.46%, 67.07%) 55.2%,
+		  hsl(220.45, 20.3%, 62.3%) 61%,
+		  hsl(220.5, 15.76%, 56.86%) 67.2%,
+		  hsl(220.57, 11.72%, 50.58%) 74.1%,
+		  hsl(220.69, 10.55%, 43.19%) 81.8%,
+		  hsl(220.96, 8.54%, 34.03%) 90.4%,
+		  hsl(0, 0%, 21%) 100%
+		);
+	  
+	//background: linear-gradient(70deg, $grisClaro, rgb(171, 203, 219));
+	background-size: cover;
+	font-family: 'Oswald', sans-serif;
+	transition: .6s ease all;
+	padding: 50px 50px;
+	
+
+	&.dark {
+		background: linear-gradient(70deg, rgb(29, 29, 29), rgb(0, 0, 0));
+		background-size: cover;
+		transition: .6s ease all;
+	}
+}
+
+a {
+	color: $grisOscuro;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+//--------------- PRIMER CONTENEDOR ---------------//
+.contenedor {
+	display: grid;
+	place-items: center;
+	position: relative;
+	width: 255px;
+	height: 355px;
+	border-radius: 1em;
+	background: linear-gradient(50deg, #2a5a3b, $azul);
+	overflow: hidden;
+	margin: 40px 20px;
+}
+
+.contenedor::before {
+	content: "";
+	position: absolute;
+	width: 450px;
+	height: 35px;
+	top: 0;
+	right: 35px;
+	transition: 1.9s;
+	background: linear-gradient(50deg, #00ff59, #02b3ff);
+	transform: rotate(-45deg) translate(-50px, -100px);
+}
+
+.card {
+	display: grid;
+	place-items: center;
+	width: 247px;
+	height: 347px;
+	background: $blanco;
+	box-shadow: $sombraDark;
+	border-radius: .8em;
+	z-index: 1;
+	color: #858585;
+	overflow: hidden;
+	padding: 1em;
+	text-align: center;
+	cursor: pointer;
+	transition: .5s ease;
+
+	body.dark & {
+		background: $grisOscuro;
+		box-shadow: $sombraLight;
+	}
+}
+
+.card:hover {
+	color: $negro;
+
+	body.dark & {
+		color: $blanco;
+	}
+}
+
+.contenedor:hover::before {
+	animation: effect 1.9s;
+}
+
+@keyframes effect {
+	100% {
+		transform: rotate(-45deg) translate(0, 450px);
+	}
+}
+//--------------- SEGUNDO CONTENEDOR ----------------//
+
+.contenedor_2 {
+	display: grid;
+	place-items: center;
+	position: relative;
+	width: 500px;
+	height: 355px;
+	border-radius: 1em;
+	background: linear-gradient(50deg, rgb(78, 34, 34), rgb(78, 34, 34));
+	overflow: hidden;
+	margin: -100px 330px;
+}	
+
+.contenedor_2::before {
+	content: "";
+	position: absolute;
+	width: 600px;
+	height: 35px;
+	top: 0;
+	right: 35px;
+	transition: 2s;
+	background: linear-gradient(50deg, #ff0000, #ff0000);
+	transform: rotate(-55deg) translate(-250px, -230px);
+    }
+
+.card_2 {
+	padding: 20px;
+	display: grid;
+	place-items: center;
+	width: 490px;
+	height: 347px;
+	background: $blanco;
+	box-shadow: $sombraDark;
+	border-radius: .8em;
+	z-index: 1;
+	color: #858585;
+	overflow: hidden;
+	padding: 1em;
+	text-align: center;
+	cursor: pointer;
+	transition: .5s ease;
+
+	body.dark & {
+		background: $grisOscuro;
+		box-shadow: $sombraLight;
+	}
+	img {
+		border-radius: 1em;
+		position:relative;
+		max-width: 100%;
+        height: auto;
+	}
+  }
+
+.card_2:hover {
+	color: $negro;
+
+	body.dark & {
+		color: $blanco;
+	}
+  }
+
+.contenedor_2:hover::before {
+	animation: effect 1.9s;
+  }
+
+@keyframes effect {
+	100% {
+		transform: rotate(-45deg) translate(0, 450px);
+	}
+  }
+//--------------- TERCER CONTENEDOR ----------------//
+.contenedor_3 {
+	display: grid;
+	place-items: center;
+	position: relative;
+	width: 255px;
+	height: 355px;
+	border-radius: 1em;
+	background: linear-gradient(50deg, #2a5a3b, $azul);
+	overflow: hidden;
+	margin: 40px 885px 0px;
+}
+
+.contenedor_3::before {
+	content: "";
+	position: absolute;
+	width: 450px;
+	height: 35px;
+	top: 0;
+	right: 35px;
+	transition: 1.9s;
+	background: linear-gradient(50deg, #00ff59, #02b3ff);
+	transform: rotate(-45deg) translate(-50px, -100px);
+}
+
+.card {
+	padding: 20px;
+	display: grid;
+	place-items: center;
+	width: 247px;
+	height: 347px;
+	background: $blanco;
+	box-shadow: $sombraDark;
+	border-radius: .8em;
+	z-index: 1;
+	color: #858585;
+	overflow: hidden;
+	padding: 1em;
+	text-align: center;
+	cursor: pointer;
+	transition: .5s ease;
+
+	body.dark & {
+		background: $grisOscuro;
+		box-shadow: $sombraLight;
+	}
+}
+
+.card:hover {
+	color: $negro;
+
+	body.dark & {
+		color: $blanco;
+	}
+}
+
+.contenedor_3:hover::before {
+	animation: effect 1.9s;
+}
+
+@keyframes effect {
+	100% {
+		transform: rotate(-45deg) translate(0, 450px);
+	}
+}
+// ----- ----- ----- ----- ----- HEADER ----- ----- ----- ----- ----- 
+nav {
+	background: $blanco;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: .3s ease all;
+	box-shadow: $sombraDark;
+
+	body.dark & {
+		background: $grisOscuro;
+		box-shadow: $sombraLight;
+		a {
+			color: $grisClaro;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+
+	.logotipo {
+		font-weight: 700;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.imagen {
+		padding-left: 100px;
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+		a {
+			margin-right: 40px;
+			&:hover {
+				color: #707070;
+			}
+		}
+	}
+}
+
+// ----- ----- ----- ----- ----- Switch ----- ----- ----- ----- ----- 
+.switch {
+	background: #4c458a;
+	border-radius: 1000px;
+	border: none;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	outline: none;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		background: #F1F1F1;
+		top: 0;
+		left: 0;
+		right: unset;
+		border-radius: 100px;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, .2);
+	}
+
+	&.active{
+		background: rgb(247, 247, 97);
+		color: #000;
+		&::after{
+			right: 0;
+			left: unset;
+		}
+	}
+	span {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		display: block;
+		background: none;
+		color: black;
+	}
+}
+
+/*---------------SOCIAL------------------------*/
+.social{
+    margin: 100px;
+}
+
+.social p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+	color: $negro;
+	 
+	body.dark &{
+		color: $blanco;
+	}
+}
+
+.links_contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links_contacto a{
+    margin: 0 100px;
+	color: $negro;
+	 
+	body.dark &{
+		color: $blanco;
+	}
+
+}
+
+.links_contacto a i{
+    font-size: 3rem;
+
+	&:hover {
+		color: $grisClaroHover;
+	}
+}
+
+/*-------------Boton-------------*/
+.btn {
+    cursor: pointer;
+    display: inline;
+    padding: 10px 20px;
+    background: $grisClaro;
+    color: $grisClaro;
+    font-size: 15px;
+    border: solid $grisOscuro;
+    border-radius: 1em;
+	box-shadow: $sombraDark;
+	transition: .3s ease all;
+	.btn:hover {
+		color: $negro;
+
+	body.dark & {
+		background: $negro;
+		box-shadow: $sombraLight;
+		a {
+			color: $grisClaro;
+			&:hover {
+				color: $blanco;
+			}
+		}
+	}
+}
+}
+
+//-------  ICONO  -------//
+
+.icono i{
+    font-size: 5rem;
+}
+
+//--------------------Sección con imagen movimiento de fondo------------------------//
+
+.title {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%);
+	background-color: rgba( 0, 0, 0, .267);
+	color: $negro;
+	padding: 5px 20px;
+	border-radius: 1em;
+	line-height: 1.5em;
+	text-align: center;
+	margin-bottom: 20px;
+}  
+
+.banner-content{
+	text-align: justify;
+	a {
+		color: $negro;
+	}
+	body.dark &{
+		color: $blanco;
+	}
+}
+
+.banner-titleone {
+	padding: 0;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.banner-titleone {
+	position: relative;
+	height: 200px;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.banner-titleone-1{
+	background-image: url(img/mountains_2_flip.jpg);
+	border-radius: 1em;
+}
+
+//----------------Banner de social----------------------------//
+
+.banner-titletwo {
+	padding: 0;
+	margin-top: 40px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.banner-titletwo {
+	position: relative;
+	height: 200px;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.banner-titletwo-2{
+	background-image: url(img/mountains_2.jpg);
+	border-radius: 1em;
+}
